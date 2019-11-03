@@ -1,0 +1,29 @@
+{
+  "name": "react-stack-gallery",
+  "version": "1.0.0",
+  "description": "A simple component for React that provides gallery like 'pinterest'",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hktysk/react-stack-gallery.git"
+  },
+  "keywords": [
+    "react",
+    "gallery",
+    "pinterest"
+  ],
+  "author": "hktysk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hktysk/react-stack-gallery/issues"
+  },
+  "homepage": "https://github.com/hktysk/react-stack-gallery#readme"
+}
