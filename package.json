@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "description": "A simple component for React that provides gallery like 'pinterest'",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "webpack": "^4.41.2"
+  },
   "devDependencies": {
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.3",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack"
   },
   "repository": {
     "type": "git",
