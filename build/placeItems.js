@@ -1,16 +1,14 @@
-"use strict";
-exports.__esModule = true;
-function placeItems(screen, lines, marginPerc) {
+export default function placeItems(screen, lines, marginPerc) {
     var items = Array.from(document.getElementsByClassName('like-pinterst-gallery-cards'));
     var margin = {
         one: Math.floor(screen * marginPerc),
         half: Math.floor(screen * marginPerc / 2),
-        quater: Math.floor(screen * marginPerc / 4)
+        quater: Math.floor(screen * marginPerc / 4),
     };
     var card = {
         width: {
             includeMargin: (screen - margin.one) / lines,
-            notIncludeMargin: (screen - margin.one) / lines - margin.half
+            notIncludeMargin: (screen - margin.one) / lines - margin.half,
         }
     };
     /*
@@ -29,4 +27,3 @@ function placeItems(screen, lines, marginPerc) {
         linesHeight[minIndex] += v.clientHeight + margin.half;
     });
 }
-exports["default"] = placeItems;
