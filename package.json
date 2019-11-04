@@ -28,7 +28,7 @@
   "scripts": {
     "test": "jest",
     "build": "webpack",
-    "start": "webpack-dev-server --hot --inline"
+    "start": "webpack-dev-server --hot --open"
   },
   "repository": {
     "type": "git",

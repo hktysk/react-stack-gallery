@@ -10,11 +10,9 @@ type Props = {
 
 const Gallery: React.FC<Props> = (props) => {
   type parentStyle = {
-    transition: string
     opacity: 0 | 1
   }
   const [parentStyle, setParentStyle] = useState<parentStyle>({
-    transition: '.2s',
     opacity: 0
   })
 
@@ -25,7 +23,6 @@ const Gallery: React.FC<Props> = (props) => {
       props.marginPerc || 0.04
     )
     setParentStyle({
-      transition: '.2s',
       opacity: 1
     })
   }
@@ -33,7 +30,7 @@ const Gallery: React.FC<Props> = (props) => {
   useEffect(() => window.addEventListener('resize', formatLayout), [])
 
   return (
-    <div style={parentStyle} onLoad={formatLayout}>
+    <div style={{position: 'relative', transition: '.2s', ...parentStyle}} onLoad={formatLayout}>
     {
       React.Children.map(props.children, (x, k) => (
         <div className="like-pinterst-gallery-cards" key={k}>{x}</div>
@@ -43,4 +40,4 @@ const Gallery: React.FC<Props> = (props) => {
   )
 }
 
-export default Gallery;
+export default Gallery
