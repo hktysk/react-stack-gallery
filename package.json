@@ -22,7 +22,9 @@
     "start": "webpack-dev-server --hot --open"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "react-resize-observer": "^1.1.1"
+  },
   "devDependencies": {
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
