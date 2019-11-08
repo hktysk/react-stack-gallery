@@ -1,19 +1,14 @@
 import React, { useEffect } from 'react';
+import ResizeObserver from 'react-resize-observer';
 import placeItems from './placeItems';
 var Gallery = function (props) {
     function formatLayout() {
-        placeItems(props.screen || window.innerWidth, props.lines || 2, props.marginPerc || 0.04);
-        console.log('aiuo');
+        var _a;
+        placeItems(props.screen || window.innerWidth, props.lines || 2, (_a = props.marginPerc, (_a !== null && _a !== void 0 ? _a : 0.04)));
     }
-    useEffect(function () {
-        /*
-          Even if onLoad event has not fired yet,
-          execute formatLayout() after loading the page.
-          because If no image element in 'props.children',
-          onLoad Event will not fire
-        */
-        window.addEventListener('resize', formatLayout);
-    });
-    return (React.createElement("div", { style: { position: 'relative' }, onLoad: formatLayout }, React.Children.map(props.children, function (x, k) { return (React.createElement("div", { className: "like-pinterst-gallery-cards", key: k }, x)); })));
+    useEffect(formatLayout, []);
+    return (React.createElement("div", { style: { position: 'relative' } },
+        React.createElement(ResizeObserver, { onResize: formatLayout }),
+        React.Children.map(props.children, function (x, k) { return (React.createElement("div", { className: "like-pinterst-gallery-cards", onLoad: formatLayout, key: k }, x)); })));
 };
 export default Gallery;

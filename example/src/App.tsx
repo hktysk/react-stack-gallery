@@ -19,6 +19,7 @@ const App: React.FC = () => {
       {
         images.map(v => (
           <img style={{
+            display: 'block',
             width: '100%',
             borderRadius: '2vw',
             transition: '.2s',

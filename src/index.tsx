@@ -14,7 +14,7 @@ const Gallery: React.FC<Props> = (props) => {
     placeItems(
       props.screen || window.innerWidth,
       props.lines || 2,
-      props.marginPerc || 0.04
+      props.marginPerc ?? 0.04
     )
   }
 
