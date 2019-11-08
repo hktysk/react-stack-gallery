@@ -8,7 +8,7 @@ Enzyme.configure({
   adapter: new Adapter()
 })
 
-describe('render', () => {
+describe('render gallery component', () => {
   let doc: Enzyme.ShallowWrapper
   let cards: Enzyme.ShallowWrapper
   const text = [
