@@ -18,7 +18,12 @@ const App: React.FC = () => {
       <Gallery lines={5} marginPerc={0.03}>
       {
         images.map(v => (
-          <img style={{width: '100%', borderRadius: '2vw', transition: '.2s', opacity: 0}} onLoad={showImage} src={`images/${v}`} key={v} />
+          <img style={{
+            width: '100%',
+            borderRadius: '2vw',
+            transition: '.2s',
+            opacity: 0
+          }} onLoad={showImage} src={`images/${v}`} key={v} />
         ))
       }
       </Gallery>
