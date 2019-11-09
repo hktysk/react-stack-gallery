@@ -1,0 +1,52 @@
+{
+  "name": "react-stack-gallery",
+  "version": "1.0.0",
+  "files": [
+    "build"
+  ],
+  "main": "build/index.js",
+  "description": "A simple component for React that provides gallery like 'pinterest'",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hktysk/react-stack-gallery.git"
+  },
+  "keywords": [
+    "react",
+    "gallery",
+    "pinterest"
+  ],
+  "author": "hktysk",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "start": "webpack-dev-server --hot --open"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react-resize-observer": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.21",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.3",
+    "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "^24.9.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "style-loader": "^1.0.0",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "bugs": {
+    "url": "https://github.com/hktysk/react-stack-gallery/issues"
+  },
+  "homepage": "https://github.com/hktysk/react-stack-gallery#readme"
+}
