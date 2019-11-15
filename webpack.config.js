@@ -2,12 +2,10 @@ const path = require('path')
 
 module.exports = {
   mode: "development",
-  entry: {
-    "index.js": "./example/src/index.tsx",
-  },
+  entry: "./example/src/index.tsx",
   output: {
-    path: __dirname,
-    filename: "[name]"
+    filename: "index.js",
+    path: `${__dirname}/example/public`
   },
   module: {
     rules: [
