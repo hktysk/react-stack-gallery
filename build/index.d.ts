@@ -4,6 +4,7 @@ declare type Props = {
     screen?: number;
     lines?: number;
     marginPerc?: number;
+    square?: boolean;
 };
 declare const Gallery: React.FC<Props>;
 export default Gallery;

@@ -15,7 +15,7 @@ const App: React.FC = () => {
   return (
     <>
       <header id="header">EXAMPLE</header>
-      <Gallery lines={5} marginPerc={0.03}>
+      <Gallery lines={5} marginPerc={0.03} square={false}>
       {
         images.map(v => (
           <img style={{

@@ -7,6 +7,7 @@ type Props = {
   screen?: number
   lines?: number
   marginPerc?: number
+  square?: boolean
 }
 
 const Gallery: React.FC<Props> = (props) => {
@@ -14,7 +15,8 @@ const Gallery: React.FC<Props> = (props) => {
     placeItems(
       props.screen || window.innerWidth,
       props.lines || 2,
-      props.marginPerc ?? 0.04
+      props.marginPerc ?? 0.04,
+      props.square || false
     )
   }
 

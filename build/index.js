@@ -21,7 +21,7 @@ var Gallery = function (props) {
   function formatLayout() {
     var _a;
 
-    (0, _placeItems.default)(props.screen || window.innerWidth, props.lines || 2, (_a = props.marginPerc, _a !== null && _a !== void 0 ? _a : 0.04));
+    (0, _placeItems.default)(props.screen || window.innerWidth, props.lines || 2, (_a = props.marginPerc, _a !== null && _a !== void 0 ? _a : 0.04), props.square || false);
   }
 
   (0, _react.useEffect)(formatLayout, []);
