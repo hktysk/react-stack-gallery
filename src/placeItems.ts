@@ -1,4 +1,9 @@
-export default function placeItems(screen: number, lines: number, marginPerc: number) {
+export default function placeItems(
+  screen: number,
+  lines: number,
+  marginPerc: number,
+  square: boolean
+): number {
   const items: HTMLElement[] = Array.from(
     document.getElementsByClassName('like-pinterst-gallery-cards')
   ) as HTMLElement[]
@@ -42,10 +47,13 @@ export default function placeItems(screen: number, lines: number, marginPerc: nu
       top: 0;
       left: 0;
       width: ${card.width.notIncludeMargin}px;
+      height: ${square ? card.width.notIncludeMargin + 'px' : 'auto'};
       transform: translate(${position.x}px, ${position.y}px);
       overflow: hidden;
     `
 
     linesHeight[minIndex] += v.clientHeight + margin.half
   })
+
+  return Math.max(...linesHeight)
 }

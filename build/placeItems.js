@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = placeItems;
 
-function placeItems(screen, lines, marginPerc) {
+function placeItems(screen, lines, marginPerc, square) {
   var items = Array.from(document.getElementsByClassName('like-pinterst-gallery-cards'));
   var margin = {
     one: Math.floor(screen * marginPerc),
@@ -33,7 +33,8 @@ function placeItems(screen, lines, marginPerc) {
       y: linesHeight[minIndex],
       x: card.width.includeMargin * minIndex + margin.half
     };
-    v.style.cssText = "\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: " + card.width.notIncludeMargin + "px;\n      transform: translate(" + position.x + "px, " + position.y + "px);\n      overflow: hidden;\n    ";
+    v.style.cssText = "\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: " + card.width.notIncludeMargin + "px;\n      height: " + (square ? card.width.notIncludeMargin + 'px' : 'auto') + ";\n      transform: translate(" + position.x + "px, " + position.y + "px);\n      overflow: hidden;\n    ";
     linesHeight[minIndex] += v.clientHeight + margin.half;
   });
+  return Math.max.apply(Math, linesHeight);
 }
