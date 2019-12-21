@@ -29,7 +29,7 @@ var Gallery = function (props) {
     setParentHeight(maxHeight);
   }
 
-  (0, _react.useEffect)(formatLayout, []);
+  (0, _react.useEffect)(formatLayout, [props]);
   return _react.default.createElement("div", {
     style: {
       position: 'relative',

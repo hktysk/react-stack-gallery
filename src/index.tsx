@@ -24,7 +24,7 @@ const Gallery: React.FC<Props> = (props) => {
     setParentHeight(maxHeight);
   }
 
-  useEffect(formatLayout, [])
+  useEffect(formatLayout, [props])
 
   return (
     <div style={{
