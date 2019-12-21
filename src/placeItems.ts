@@ -1,4 +1,9 @@
-export default function placeItems(screen: number, lines: number, marginPerc: number, square: boolean) {
+export default function placeItems(
+  screen: number,
+  lines: number,
+  marginPerc: number,
+  square: boolean
+): number {
   const items: HTMLElement[] = Array.from(
     document.getElementsByClassName('like-pinterst-gallery-cards')
   ) as HTMLElement[]
@@ -49,4 +54,6 @@ export default function placeItems(screen: number, lines: number, marginPerc: nu
 
     linesHeight[minIndex] += v.clientHeight + margin.half
   })
+
+  return Math.max(...linesHeight)
 }

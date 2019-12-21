@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ResizeObserver from 'react-resize-observer'
 import placeItems from './placeItems'
 
@@ -11,19 +11,27 @@ type Props = {
 }
 
 const Gallery: React.FC<Props> = (props) => {
+  const [parentHeight, setParentHeight] = useState<number>(0);
+
   function formatLayout(): void {
-    placeItems(
+    const maxHeight: number = placeItems(
       props.screen || window.innerWidth,
       props.lines || 2,
       props.marginPerc ?? 0.04,
       props.square || false
-    )
+    );
+
+    setParentHeight(maxHeight);
   }
 
   useEffect(formatLayout, [])
 
   return (
-    <div style={{position: 'relative'}}>
+    <div style={{
+      position: 'relative',
+      width: '100%',
+      height: `${parentHeight}px`
+    }}>
       <ResizeObserver onResize={formatLayout} />
       {
         React.Children.map(props.children, (x, k) => (

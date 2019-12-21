@@ -36,4 +36,5 @@ function placeItems(screen, lines, marginPerc, square) {
     v.style.cssText = "\n      position: absolute;\n      top: 0;\n      left: 0;\n      width: " + card.width.notIncludeMargin + "px;\n      height: " + (square ? card.width.notIncludeMargin + 'px' : 'auto') + ";\n      transform: translate(" + position.x + "px, " + position.y + "px);\n      overflow: hidden;\n    ";
     linesHeight[minIndex] += v.clientHeight + margin.half;
   });
+  return Math.max.apply(Math, linesHeight);
 }

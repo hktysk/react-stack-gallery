@@ -1,1 +1,1 @@
-export default function placeItems(screen: number, lines: number, marginPerc: number, square: boolean): void;
+export default function placeItems(screen: number, lines: number, marginPerc: number, square: boolean): number;
